@@ -1,0 +1,67 @@
+body {
+    /* preserve navbar */
+    padding-top: 61px;
+
+}
+
+#nav-link {
+    font-weight: 400;
+    color: rgb(60, 190, 121);
+}
+
+.bg-dark {
+    background-color: Black !important;
+}
+
+.bg-light {
+    background-color: WhiteSmoke !important;
+}
+
+.bg-trees {
+    background-image: url(https://s19.postimg.cc/bd31cyn6r/road.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.not-found {
+    text-align: center;
+    position: relative;
+    height: 900x;
+    box-sizing: border-box;
+    margin-top: 175px;
+}
+
+.not-found h1 {
+    text-align: center;
+    color: rgb(40, 135, 84);
+    font-size: 298px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.py-6 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.py-7 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+@media (min-width: 992px) {
+    .border-lg-0 {
+        border: none !important;
+    }
+}
