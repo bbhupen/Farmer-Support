@@ -1,0 +1,69 @@
+<%- include('partials/header')%>
+
+    <body>
+
+        <div class="flex-wrapper">
+            <%- include('partials/navbar')%>
+            <div>
+                <div class="container">
+                    <h3 class="p-4 text-center"><b>Fill in the details below to predict the most suitable crop to grow in your
+                            farm.</b> </h3>
+
+                    <form id="formFieldData">
+                        <div class="">
+                            <label for="Nitrogen" class="form-label"><b>Nitrogen</b></label>
+                            <input type="number" class="form-control" id="Nitrogen" name="nitrogen"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Phosphorous" class="form-label"><b>Phosphorous</b></label>
+                            <input type="number" class="form-control" id="Phosphorous" name="phosphorous"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Pottasium" class="form-label"><b>Pottasium</b></label>
+                            <input type="number" class="form-control" id="Pottasium" name="pottasium"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ph" class="form-label"><b>ph level</b></label>
+                            <input type="number" class="form-control" id="ph" name="ph"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Rainfall" class="form-label"><b>Rainfall</b></label>
+                            <input type="number" class="form-control" id="ph" name="rainfall"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Temperature" class="form-label"><b>Temperature</b></label>
+                            <input type="number" class="form-control" id="Temperature" name="temperature"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Humidity" class="form-label"><b>Humidity</b></label>
+                            <input type="number" class="form-control" id="Humidity" name="humidity"
+                                placeholder="Enter the value" required />
+                        </div>
+
+
+                        <button type="submit" class="btn btn-success rounded-0 my-3" id="btnPredict"> Predict</button>
+                    </form>
+
+                </div>
+            </div>
+
+
+            <script src="scripts/crop-recommend.js"></script>
+            <%- include('partials/footer')%>
+        </div>
+        
+    </body>
+
+    </html>

@@ -1,0 +1,74 @@
+<%- include('partials/header')%>
+
+    <body>
+
+        <div class="flex-wrapper">
+            <%- include('partials/navbar')%>
+
+            <div>
+                <div class="container">
+                    <h3 class="p-4 text-center"><b>Fill in the details below to predict the most suitable Fertilizer to use in
+                            your farm.</b> </h3>
+
+                    <form id="formFertilizer">
+                        <div class="">
+                            <label for="Nitrogen" class="form-label"><b>Nitrogen</b></label>
+                            <input type="number" class="form-control" id="Nitrogen" name="nitrogen"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Phosphorous" class="form-label"><b>Phosphorous</b></label>
+                            <input type="number" class="form-control" id="Phosphorous" name="phosphorous"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Pottasium" class="form-label"><b>Pottasium</b></label>
+                            <input type="number" class="form-control" id="Pottasium" name="pottasium"
+                                placeholder="Enter the value" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="crop"><b>Crop you want to grow</b></label>
+                            <select name="cropname" class="form-control fw-bold" id="crop" placeholder="Select a crop"
+                                required>
+
+                                <option selected> Select crop</option>
+                                <option>rice</option>
+                                <option>maize</option>
+                                <option>chickpea</option>
+                                <option>kidneybeans</option>
+                                <option>pigeonpeas</option>
+                                <option>mothbeans</option>
+                                <option>mungbean</option>
+                                <option>blackgram</option>
+                                <option>lentil</option>
+                                <option>pomegranate</option>
+                                <option>banana</option>
+                                <option>mango</option>
+                                <option>grapes</option>
+                                <option>watermelon</option>
+                                <option>muskmelon</option>
+                                <option>apple</option>
+                                <option>orange</option>
+                                <option>papaya</option>
+                                <option>coconut</option>
+                                <option>cotton</option>
+                                <option>jute</option>
+                                <option>coffee</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-success rounded-0 my-3" id="submitBtn"> Predict</button>
+                    </form>
+
+                </div>
+                <%- include('partials/footer')%>
+        </div>
+        
+        <script src="scripts/fertilizer.js"></script>
+        
+    </body>
+
+    </html>

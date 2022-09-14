@@ -1,0 +1,130 @@
+<%- include('partials/header')%>
+
+    <body>
+        <div>   
+            <%- include('partials/navbar')%>
+        </div>
+
+            <div class="container" style="padding-top: 1rem;">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/farmm.jpg" class="d-block w-100" alt="..." />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/farming.jpg" class="d-block w-100" alt="..." />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/farmm.jpg" class="d-block w-100" alt="..." />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                </br>
+                
+                
+                <!-- cards section -->
+
+
+                <section class="py-5">
+                    <div class="container-fluid px-4">
+                        <h2 class="display-4 text-center">We speak _</h2>
+    
+                        <div class="row my-4">
+                            <div class="col-md py-3">
+                                <section class="py-5 text-center bg-light">
+                                    <h3 class="h2">Search for a crop</h3>
+                                    <a class="btn btn-success rounded-0" href="/search">Visit</a>
+                                </section>
+                            </div><!-- .col -->
+    
+                            <div class="col-md py-3">
+                                <section class="py-5 text-center bg-light">
+                                    <h3 class="h2">Crop recommendation.</h3>
+                                    <a class="btn btn-success rounded-0" href="/crop-recommend">Visit</a>
+                                </section>
+                            </div><!-- .col -->
+    
+                            <div class="col-md py-3">
+                                <section class="py-5 text-center bg-light">
+                                    <h3 class="h2">Predict fertilizer</h3>
+                                    <a class="btn btn-success rounded-0" href="/fertilizer">Visit</a>
+                                </section>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </section>
+
+                <!-- about us section -->
+                <div class="container-fluid px-4">
+                    <section id="about-us" class="alt" style="padding-bottom: 1rem;">
+                        <div class="container">
+                            <div class="row my-4">
+                                <div class="col-md">
+                                    <img src="https://res.cloudinary.com/diekga3og/image/upload/c_fill,h_500,w_500/v1662961783/2681558_ufoumi.jpg"
+                                        class="img-fluid" alt="About Us">
+                                </div>
+                                <div class="col-md text-col">
+                                    <h1>About Us</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
+                                        eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit,
+                                        posuere a, pede.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
+                                        eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit,
+                                        posuere a, pede.</p>
+                                        <a class="btn btn-success rounded-0" href="#">Try Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+
+
+            </div>
+
+
+
+            
+
+
+
+
+            <%- include('partials/footer')%>
+    </body>
+
+
+
+    </html>

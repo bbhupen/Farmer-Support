@@ -1,0 +1,26 @@
+<%- include('partials/header')%>
+
+    <body>
+
+        <div class="flex-wrapper">
+            <%- include('partials/navbar')%>
+
+                <div class="container">
+                    <h3 class="p-4 text-center"><b>Get information about a crop by searching for it. </b></h3>
+                    <br /><br />
+
+                    <form method="POST" action="{{ url_for('fert_recommend') }}">
+                        <div class="mb-3">
+                            <label for="Crop_name" class="form-label"><b>Enter the name here.</b></label>
+                            <input type="text" class="form-control" id="Crop_name" name="crop_name"
+                                placeholder="Crop name" required />
+                        </div>
+                        <button type="submit" class="btn btn-success rounded-0">Search</button>
+                    </form>
+                </div>  
+            <%- include('partials/footer')%>
+        </div>
+        
+    </body>
+
+    </html>
