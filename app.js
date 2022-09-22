@@ -23,6 +23,11 @@ app.set('views', 'views')
 
 app.use("/", allRoutes)
 
+//For 404
+
+app.use((req,res,next) => {
+    res.render('404')
+})
 
 // LISTEN 
 

@@ -54,10 +54,7 @@ router.get("/fertilizer", async (req, res) => {
 // })
 
 router.get("/fertilizer-result", async (req, res) => {
-    const q = req.params
-
-    
-
+    const q = req.params  
     res.render('fertilizer-result', { result: q })
 })
 
@@ -66,10 +63,6 @@ router.get("/crop-result", async (req, res) => {
     const { q } = req.query
     res.render('crop-result', { result: q })
     // res.send("crop-result", result)
-})
-
-router.get("*", (req, res) => {
-    res.render("404")
 })
 
 export default router
