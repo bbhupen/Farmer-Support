@@ -16,6 +16,10 @@ router.get("/search", async (req, res) => {
     res.render("search")
 })
 
+router.get("/search-result", async(req, res) => {
+    res.render("search-result")
+})
+
 router.get("/fertilizer", async (req, res) => {
     res.render("fertilizer")
 })

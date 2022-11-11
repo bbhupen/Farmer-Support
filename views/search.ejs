@@ -9,18 +9,51 @@
                     <h3 class="p-4 text-center"><b>Get information about a crop by searching for it. </b></h3>
                     <br /><br />
 
-                    <form method="POST" action="{{ url_for('fert_recommend') }}">
+                    <form id="formCropSearch">
                         <div class="mb-3">
-                            <label for="Crop_name" class="form-label"><b>Enter the name here.</b></label>
-                            <input type="text" class="form-control" id="Crop_name" name="crop_name"
-                                placeholder="Crop name" required />
+                            <label for="crop">Crop you want to search for:</label>
+                            <select name="cropname" class="form-control" id="crop" placeholder="Select a crop"
+                                style="font-weight: bold" required>
+                                <option selected> Select crop</option>
+                                <option>Rice</option>
+                                <option>Maize</option>
+                                <option>Chickpea</option>
+                                <option>Kidneybeans</option>
+                                <option>Pigeonpeas</option>
+                                <option>Mothbeans</option>
+                                <option>Mungbean</option>
+                                <option>Blackgram</option>
+                                <option>Lentil</option>
+                                <option>Pomegranate</option>
+                                <option>Banana</option>
+                                <option>Mango</option>
+                                <option>Grapes</option>
+                                <option>Watermelon</option>
+                                <option>Muskmelon</option>
+                                <option>Apple</option>
+                                <option>Orange</option>
+                                <option>Papaya</option>
+                                <option>Coconut</option>
+                                <option>Cotton</option>
+                                <option>Jute</option>
+                                <option>Coffee</option>
+                            </select>
                         </div>
+
                         <button type="submit" class="btn btn-success rounded-0">Search</button>
                     </form>
-                </div>  
-            <%- include('partials/footer')%>
+
+                    <div id="searchResult"></div>
+
+                    <script src="scripts/search-crop.js"></script>
+
+                   
+                </div>
+
+                <%- include('partials/footer')%>
+                    <script src="//code.tidio.co/hoedfruezzrixx92o4gbqxsh8qgw9kco.js" async></script>
         </div>
-        
+
     </body>
 
     </html>

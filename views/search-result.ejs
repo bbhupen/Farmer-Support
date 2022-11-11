@@ -1,0 +1,58 @@
+<%- include('partials/header')%>
+
+
+    <body>
+        <div class="flex-wrapper">
+            <%- include('partials/navbar')%>
+
+
+                <h3 class="text-center" style="margin: 4rem"> <b>The details on the crop that you've searched for are:
+                    </b></h3>
+                <div class="container py-2 mx-auto h-10 " style="margin: 4rem;">
+
+                    <div class="row">
+                        <div class="col-sm py-2 py-md-3">
+                            <div class="card card-body" style="justify-content: center; background-color: #fafaf5">
+                                <h1 class="text-center"
+                                    style="color: black; font-size: 50px; text-transform: capitalize; text-decoration: underline; font-family: serif; ">
+                                    {{ cropTitle }} </h1>
+                                <br>
+
+                                <img src="{{url_for('static',filename=image1)}}" class="rounded center"
+                                    style="padding: 0 270px" alt="Image">
+
+                                <br>
+                                <p class="text-center" style="color: black; font-size: 30px; font-family: serif; ">
+                                    Scientific name: <i> {{ result1 }} </i></p> <br>
+                                <p class="text-center"
+                                    style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
+                                    Description: </p>
+                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; "> {{
+                                    result2 }}</p> <br>
+                                <p class="text-center"
+                                    style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
+                                    Cultivation method: </p>
+                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; "> {{
+                                    result3 }}</p> <br>
+                                <p class="text-center"
+                                    style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
+                                    Climatic conditions: </p>
+                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; "> {{
+                                    result4 }}</p> <br>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+
+        <script src="scripts/crop-handler.js"></script>
+
+        <%- include('partials/footer')%>
+    </body>
+
+    </html>
