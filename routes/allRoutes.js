@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { query } from 'express'
 import request from 'request'
 
 const router = express.Router()
@@ -16,8 +16,38 @@ router.get("/search", async (req, res) => {
     res.render("search")
 })
 
-router.get("/search-result", async(req, res) => {
-    res.render("search-result")
+router.get("/search-result", async (req, res) => {
+
+    const { q } = req.query
+    console.log(q)
+
+    const data = JSON.stringify({
+        cropname: q
+    })
+
+    request.post(
+        'http://127.0.0.1:5000/crop-search',
+        {
+            json: data
+        },
+
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                console.log(body)
+                res.render('search-result', { 
+                    title: body['title'],
+                    climate: body['climate'], 
+                    scname: body['sc-name'], 
+                    desc: body['desc'],
+                    cult: body['cult']
+                 })
+            }
+            else {
+                console.log(error)
+            }
+        }
+    );
+
 })
 
 router.get("/fertilizer", async (req, res) => {
@@ -48,7 +78,7 @@ router.get("/about", async (req, res) => {
 
 //     const payload = {key:null}
 
-    
+
 //     request.post(
 //         'http://127.0.0.1:5000/fertilizer-predict',
 //         {
@@ -66,11 +96,11 @@ router.get("/about", async (req, res) => {
 //         }
 //     );
 
-    
+
 // })
 
 router.get("/fertilizer-result", async (req, res) => {
-    const q = req.params  
+    const q = req.params
     res.render('fertilizer-result', { result: q })
 })
 

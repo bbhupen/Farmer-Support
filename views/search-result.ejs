@@ -1,6 +1,5 @@
 <%- include('partials/header')%>
 
-
     <body>
         <div class="flex-wrapper">
             <%- include('partials/navbar')%>
@@ -15,30 +14,36 @@
                             <div class="card card-body" style="justify-content: center; background-color: #fafaf5">
                                 <h1 class="text-center"
                                     style="color: black; font-size: 50px; text-transform: capitalize; text-decoration: underline; font-family: serif; ">
-                                    {{ cropTitle }} </h1>
+                                    <%= title %>
+                                </h1>
                                 <br>
 
-                                <img src="{{url_for('static',filename=image1)}}" class="rounded center"
+                                <img src="/images/crop_images/<%= title %>.jpg" class="rounded center"
                                     style="padding: 0 270px" alt="Image">
 
                                 <br>
                                 <p class="text-center" style="color: black; font-size: 30px; font-family: serif; ">
-                                    Scientific name: <i> {{ result1 }} </i></p> <br>
+                                    Scientific name: <i>
+                                        <%= (typeof scname != "undefined" ? scname : "") %>
+                                    </i></p> <br>
                                 <p class="text-center"
                                     style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
                                     Description: </p>
-                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; "> {{
-                                    result2 }}</p> <br>
+                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; ">
+                                    <%= (typeof desc != "undefined" ? desc : "") %>
+                                </p> <br>
                                 <p class="text-center"
                                     style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
                                     Cultivation method: </p>
-                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; "> {{
-                                    result3 }}</p> <br>
+                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; ">
+                                    <%= (typeof cult != "undefined" ? cult : "") %>
+                                </p> <br>
                                 <p class="text-center"
                                     style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
                                     Climatic conditions: </p>
-                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; "> {{
-                                    result4 }}</p> <br>
+                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; ">
+                                    <%= (typeof climate != "undefined" ? climate : "") %>
+                                </p> <br>
 
                             </div>
 
