@@ -24,6 +24,18 @@ router.get("/fertilizer", async (req, res) => {
     res.render("fertilizer")
 })
 
+router.get("/faqs", async (req, res) => {
+    res.render("faqs")
+})
+
+router.get("/chat", async (req, res) => {
+    res.render("chat")
+})
+
+router.get("/about", async (req, res) => {
+    res.render("about")
+})
+
 // router.post("/fertilizer", async (req, res) => {
 //     const { nitrogen, phosphorous, pottasium, cropname } = req.body
 
