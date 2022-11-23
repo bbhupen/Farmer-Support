@@ -1,7 +1,7 @@
 const cropSearch = document.getElementById('formCropSearch')
 const searchResult = document.getElementById('searchResult')
 
-cropSearch.addEventListener('submit', async(e) => {
+cropSearch.addEventListener('submit', e => {
     e.preventDefault()
 
     let data = new FormData(cropSearch)

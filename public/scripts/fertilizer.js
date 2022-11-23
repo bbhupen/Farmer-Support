@@ -10,6 +10,8 @@ formFertilizer.addEventListener('submit', async(e) => {
 
     console.log(jsonFormData)
 
+    // window.location.replace(`/search-result?q=${formDataObjects['cropname'].toLowerCase()}`)
+
     fetch('http://127.0.0.1:5000/fertilizer-predict', {
         method: 'POST',
         headers: {
@@ -18,7 +20,7 @@ formFertilizer.addEventListener('submit', async(e) => {
         body: jsonFormData
     })
     .then(response => response.json())
-    .then(result => window.location.replace(`/fertilizer-result?q=${result['result']}`))
+    .then(result => window.location.replace(`/fertilizer-result?q=${result['key']}`))
     .then(error => console.log(`This is the error ${error}`))
 
 })

@@ -25,6 +25,8 @@ router.get("/search-result", async (req, res) => {
         cropname: q
     })
 
+    console.log(data)
+    
     request.post(
         'http://127.0.0.1:5000/crop-search',
         {
@@ -33,7 +35,6 @@ router.get("/search-result", async (req, res) => {
 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                console.log(body)
                 res.render('search-result', { 
                     title: body['title'],
                     climate: body['climate'], 
@@ -52,6 +53,39 @@ router.get("/search-result", async (req, res) => {
 
 router.get("/fertilizer", async (req, res) => {
     res.render("fertilizer")
+})
+
+router.get("/fertilizer-result", async (req, res) => {
+    
+        const { q } = req.query
+        console.log(q)
+    
+        const data = JSON.stringify({
+            key: q
+        })
+    
+        console.log(data)
+        
+        request.post(
+            'http://127.0.0.1:5000/fertilizer-key',
+            {
+                json: data
+            },
+    
+            function (error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    console.log(body)
+                    res.render('fertilizer-result', { 
+                        result: body['result']['result'], 
+                        suggestion: body['result']['suggestion'] 
+                     })
+                }
+                else {
+                    console.log(error)
+                }
+            }
+        );
+    
 })
 
 router.get("/faqs", async (req, res) => {

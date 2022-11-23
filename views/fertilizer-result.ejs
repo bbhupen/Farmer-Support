@@ -16,6 +16,11 @@
                                 <div class="card card-body" style="justify-content: center;">
                                     <p class="text-center"
                                         style="color: black; font-size: 26px; font-family: serif; "><%= result %>
+                                        <br>
+                                        Please follow the following suggestion for your field: <br>
+                                        <% for(var i = 0; i < suggestion.length; i++ ){ %>
+                                            <li> <%= suggestion[i] %></li>
+                                        <% } %>
                                     </p>
                                 </div>
                             </div>
