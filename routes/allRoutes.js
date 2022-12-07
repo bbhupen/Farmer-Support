@@ -141,7 +141,31 @@ router.get("/fertilizer-result", async (req, res) => {
 
 router.get("/crop-result", async (req, res) => {
     const { q } = req.query
-    res.render('crop-result', { result: q })
+
+    const data = JSON.stringify({
+        cropname: q
+    })
+
+    console.log(data)
+    
+    request.post(
+        'http://127.0.0.1:5000/crop-search',
+        {
+            json: data
+        },
+
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                res.render('crop-result', { 
+                    result: q,
+                    cult: body['cult']
+                 })
+            }
+            else {
+                console.log(error)
+            }
+        }
+    );
     // res.send("crop-result", result)
 })
 

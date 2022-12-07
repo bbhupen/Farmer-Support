@@ -11,12 +11,14 @@
                             <div class="col-sm py-2 py-md-3">
                                 <div class="card card-body" style="justify-content: center;">
                                     <h1 class="text-center"
-                                        style="color: black; font-size: 45px; font-family: serif "><b>Crop Predicted:
+                                        style="color: black;"><b>Crop Predicted:
                                             <i><%= result %></i></b></h1>
                                     <h1 class="text-center"
-                                        style="color: black; font-size: 45px; font-family: serif ">So, grow <i><%= result %></i> in your farm.</h1>
+                                        style="color: black;">So, grow <i><%= result %></i> in your farm.</h1>
                                     <br></br>
                                     <img src="images/crop_images/<%= result %>.jpg" class="img-fluid" alt="Image" />
+                                    <br><h2>The cultivation method you can follow to grow <% result %> in your field are: </h2>
+                                        <h5><%= cult %></h5>
                                 </div>
                             </div>
                         </div>

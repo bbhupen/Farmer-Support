@@ -1,59 +1,53 @@
 <%- include('partials/header')%>
 
     <body>
-        <div class="flex-wrapper">
+        <div class="breadcrumbs">
             <%- include('partials/navbar')%>
 
+                    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="row">
+            <div class="col-lg-8">
+              <img src="/images/crop_images/<%= title %>.jpg" class="img-fluid" alt="">
+              <h3> Description </h3>
+              <p>
+                <%= (typeof desc !="undefined" ? desc : "" ) %>
 
-                <h3 class="text-center" style="margin: 4rem"> <b>The details on the crop that you've searched for are:
-                    </b></h3>
-                <div class="container py-2 mx-auto h-10 " style="margin: 4rem;">
+              </p>
 
-                    <div class="row">
-                        <div class="col-sm py-2 py-md-3">
-                            <div class="card card-body" style="justify-content: center; background-color: #fafaf5">
-                                <h1 class="text-center"
-                                    style="color: black; font-size: 50px; text-transform: capitalize; text-decoration: underline; font-family: serif; ">
-                                    <%= title %>
-                                </h1>
-                                <br>
+              <h3> Cultivation Method </h3>
+              <p>
+                <%= (typeof cult !="undefined" ? cult : "" ) %>
+              </p>
 
-                                <img src="/images/crop_images/<%= title %>.jpg" class="rounded center"
-                                    style="padding: 0 270px" alt="Image">
+               <h3> Climatic Conditions </h3>
+              <p>
+                <%= (typeof climate !="undefined" ? climate : "" ) %>
+              </p>
+            </div>
+            <div class="col-lg-4">
+  
 
-                                <br>
-                                <p class="text-center" style="color: black; font-size: 30px; font-family: serif; ">
-                                    Scientific name: <i>
-                                        <%= (typeof scname != "undefined" ? scname : "") %>
-                                    </i></p> <br>
-                                <p class="text-center"
-                                    style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
-                                    Description: </p>
-                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; ">
-                                    <%= (typeof desc != "undefined" ? desc : "") %>
-                                </p> <br>
-                                <p class="text-center"
-                                    style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
-                                    Cultivation method: </p>
-                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; ">
-                                    <%= (typeof cult != "undefined" ? cult : "") %>
-                                </p> <br>
-                                <p class="text-center"
-                                    style="color: black; font-size: 36px; font-family: serif; text-decoration: underline;">
-                                    Climatic conditions: </p>
-                                <p class="text-center" style="color: black; font-size: 26px; font-family: serif; ">
-                                    <%= (typeof climate != "undefined" ? climate : "") %>
-                                </p> <br>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                </div>
-
+                <div class="course-info d-flex justify-content-between align-items-center">
+                    <h5>Common name</h5>
+                    <i><p> <%= title %> </p></i>
+                  </div>
+      
+              <div class="course-info d-flex justify-content-between align-items-center">
+                <h5>Scientific name</h5>
+                <i><p><%= (typeof scname !="undefined" ? scname : "" ) %></p></i>
+              </div>
+  
+              
+  
+            </div>
+          </div>
+  
         </div>
+      </section><!-- End Cource Details Section -->
+    </div>
 
         <%- include('partials/footer')%>
     </body>
