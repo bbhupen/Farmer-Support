@@ -5,26 +5,34 @@
         <div class="flex-wrapper">
             <%- include('partials/navbar')%>
 
-                <div>
-                    <div class="container py-2 mx-auto my-20 h-10 border-10" style="margin: 4rem;">
-                        <div class="row">
-                            <div class="col-sm py-2 py-md-3">
-                                <div class="card card-body" style="justify-content: center;">
-                                    <h1 class="text-center"
-                                        style="color: black;"><b>Crop Predicted:
-                                            <i><%= result %></i></b></h1>
-                                    <h1 class="text-center"
-                                        style="color: black;">So, grow <i><%= result %></i> in your farm.</h1>
-                                    <br></br>
-                                    <img src="images/crop_images/<%= result %>.jpg" class="img-fluid" alt="Image" />
-                                    <br><h2>The cultivation method you can follow to grow <% result %> in your field are: </h2>
-                                        <h5><%= cult %></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="breadcrumbs">
+                    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+              <img src="images/crop_images/<%= result %>.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+              <h3>You should plant 
+                <a href="/search-result?q=<%= result %>"
+                style="color: #5fcf80; text-transform:uppercase;"><%=result %></a> 
+                in your farm</h3>
+              <p style="font-size: 20px;"><br>
+                The below cultivation can be followed to plant <%= result %> :
+              </p><br>
+              <p style="font-size: 17px;" class="fst-italic">
+                <%= cult %>
+              </p>
+  
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End About Section -->
+            </div>
 
-                </div>
 
                 <%- include('partials/footer')%>
         </div>

@@ -133,11 +133,6 @@ router.get("/about", async (req, res) => {
 
 // })
 
-router.get("/fertilizer-result", async (req, res) => {
-    const q = req.params
-    res.render('fertilizer-result', { result: q })
-})
-
 
 router.get("/crop-result", async (req, res) => {
     const { q } = req.query

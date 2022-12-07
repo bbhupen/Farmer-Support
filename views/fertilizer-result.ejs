@@ -6,28 +6,32 @@
         <div class="flex-wrapper">
             <%- include('partials/navbar')%>
 
-                <div>
-                    <h3 class="text-center" style="margin: 4rem"> <b>The details on the type of fertilizer you
-                            should use are: </b></h3>
-                    <div class="container py-2 mx-auto h-10 " style="margin: 4rem;">
 
-                        <div class="row">
-                            <div class="col-sm py-2 py-md-3">
-                                <div class="card card-body" style="justify-content: center;">
-                                    <p class="text-center"
-                                        style="color: black; font-size: 26px; font-family: serif; "><%= result %>
-                                        <br>
-                                        Please follow the following suggestion for your field: <br>
-                                        <% for(var i = 0; i < suggestion.length; i++ ){ %>
-                                            <li> <%= suggestion[i] %></li>
-                                        <% } %>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="breadcrumbs">
 
-                    </div>
-                </div>
+                <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="row">
+            <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
+              <h3><%= result %></h3>
+              <p style="font-size: 19px;" class="fst-italic">
+                Please follow the following suggestion for your field:
+              </p>
+              <ul>
+                <% for(var i = 0; i < suggestion.length; i++ ){ %>
+                    <li><i class="bi bi-check-circle"></i> <%= suggestion[i] %></li>
+                <% } %>
+              </ul>
+              
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End About Section -->
+
+            
 
                 <%- include('partials/footer')%>
             </div>
