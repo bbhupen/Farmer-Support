@@ -6,9 +6,11 @@
             <%- include('partials/navbar')%>
 
                 <div class="container">
-                    <h3 class="p-4 text-center"><b>Get info about a crop by searching for it. </b></h3>
-                    <br /><br />
+                    <h3 class="p-4 text-center"><b></b></h3>
+                        <br /><br />
 
+                        <h3 class="p-4 text-center"><b>Get information about a crop by searching for it. </b></h3>
+                        
                     <form id="formCropSearch">
                         <div class="mb-3">
                             <label for="crop">Crop you want to search for:</label>
@@ -45,13 +47,18 @@
 
                     <div id="searchResult"></div>
 
+                    <br><br>
+
+                    <h5>Didn't find the crop that you're looking for? Here's what you can do!</h5>
+                    <h5>Visit this <a href="/chat">link</a> and place your queries there. </h5>
+
                     <script src="scripts/search-crop.js"></script>
 
 
                 </div>
 
                 <%- include('partials/footer')%>
-                    <script src="//code.tidio.co/w9ygzoykei8d2s0rlout2aml0noebdus.js" async></script>
+                    
         </div>
 
     </body>
