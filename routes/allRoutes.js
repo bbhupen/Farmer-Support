@@ -100,39 +100,6 @@ router.get("/about", async (req, res) => {
     res.render("about")
 })
 
-// router.post("/fertilizer", async (req, res) => {
-//     const { nitrogen, phosphorous, pottasium, cropname } = req.body
-
-//     const data = JSON.stringify({
-//         nitrogen: nitrogen,
-//         phosphorous: phosphorous,
-//         pottasium: pottasium,
-//         cropname: cropname
-//     })
-
-//     const payload = {key:null}
-
-
-//     request.post(
-//         'http://127.0.0.1:5000/fertilizer-predict',
-//         {
-//             json: data
-//         },
-
-//         function (error, response, body) {
-//             if (!error && response.statusCode == 200) {
-//                 console.log(body)
-//                 res.render('fertilizer-result', { result: body })
-//             }
-//             else {
-//                 console.log(error)
-//             }
-//         }
-//     );
-
-
-// })
-
 
 router.get("/crop-result", async (req, res) => {
     const { q } = req.query
@@ -161,7 +128,7 @@ router.get("/crop-result", async (req, res) => {
             }
         }
     );
-    // res.send("crop-result", result)
+    
 })
 
 export default router
